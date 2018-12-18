@@ -1,0 +1,685 @@
+{
+  "header" : {
+    "dataModelVersion" : "2"
+  },
+  "content" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "7a3601ee-0167-1000-0000-00002190143b",
+        "id" : "54bd8440-d8c7-34fb-bce8-c93378d8ee51",
+        "name" : "PutHiveQL",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "607cb2f6-9a3a-3675-8aab-a28c638ea2e4",
+      "identifier" : "283e9e4b-af7b-38ab-bc74-608e9fe94b0b",
+      "labelIndex" : 1,
+      "name" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "7a3601ee-0167-1000-0000-00002190143b",
+        "id" : "1167770d-efe2-3905-bb86-5eef56e7e081",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "7a3601ee-0167-1000-0000-00002190143b",
+        "id" : "40d24c55-dd3d-3490-99f9-3d6630655a50",
+        "name" : "PutHDFS",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "607cb2f6-9a3a-3675-8aab-a28c638ea2e4",
+      "identifier" : "667bfb1a-5ee1-3459-a311-26e09575f03c",
+      "labelIndex" : 1,
+      "name" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "7a3601ee-0167-1000-0000-00002190143b",
+        "id" : "1167770d-efe2-3905-bb86-5eef56e7e081",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "7a3601ee-0167-1000-0000-00002190143b",
+        "id" : "0d79b4f1-b67d-3880-8716-e15befde8dee",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "607cb2f6-9a3a-3675-8aab-a28c638ea2e4",
+      "identifier" : "84dfe32d-ffdc-3de8-a9ae-0e7502d88bf2",
+      "labelIndex" : 1,
+      "name" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "7a3601ee-0167-1000-0000-00002190143b",
+        "id" : "40d24c55-dd3d-3490-99f9-3d6630655a50",
+        "name" : "PutHDFS",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "7a3601ee-0167-1000-0000-00002190143b",
+        "id" : "0c9b9dfb-0bc6-3328-abaf-d344e3f78455",
+        "name" : "PutHDFS",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "607cb2f6-9a3a-3675-8aab-a28c638ea2e4",
+      "identifier" : "f878ff65-7a86-3d17-b450-14c70121fca1",
+      "labelIndex" : 1,
+      "name" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "7a3601ee-0167-1000-0000-00002190143b",
+        "id" : "1167770d-efe2-3905-bb86-5eef56e7e081",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "zIndex" : 0
+    } ],
+    "controllerServices" : [ {
+      "bundle" : {
+        "artifact" : "nifi-distributed-cache-services-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.7.0.3.2.0.0-520"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ ],
+      "groupIdentifier" : "607cb2f6-9a3a-3675-8aab-a28c638ea2e4",
+      "identifier" : "70e609ae-ab51-31d5-a432-c955a728deb1",
+      "name" : "DistributedMapCacheServer",
+      "properties" : {
+        "Eviction Strategy" : "Least Frequently Used",
+        "Port" : "4557",
+        "Maximum Cache Entries" : "10000"
+      },
+      "propertyDescriptors" : {
+        "Eviction Strategy" : {
+          "displayName" : "Eviction Strategy",
+          "identifiesControllerService" : false,
+          "name" : "Eviction Strategy",
+          "sensitive" : false
+        },
+        "SSL Context Service" : {
+          "displayName" : "SSL Context Service",
+          "identifiesControllerService" : true,
+          "name" : "SSL Context Service",
+          "sensitive" : false
+        },
+        "Persistence Directory" : {
+          "displayName" : "Persistence Directory",
+          "identifiesControllerService" : false,
+          "name" : "Persistence Directory",
+          "sensitive" : false
+        },
+        "Port" : {
+          "displayName" : "Port",
+          "identifiesControllerService" : false,
+          "name" : "Port",
+          "sensitive" : false
+        },
+        "Maximum Cache Entries" : {
+          "displayName" : "Maximum Cache Entries",
+          "identifiesControllerService" : false,
+          "name" : "Maximum Cache Entries",
+          "sensitive" : false
+        }
+      },
+      "type" : "org.apache.nifi.distributed.cache.server.map.DistributedMapCacheServer"
+    }, {
+      "bundle" : {
+        "artifact" : "nifi-hive3-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.7.0.3.2.0.0-520"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "nifi-standard-services-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.7.0.3.2.0.0-520"
+        },
+        "type" : "org.apache.nifi.dbcp.DBCPService"
+      }, {
+        "bundle" : {
+          "artifact" : "nifi-hive-services-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.7.0.3.2.0.0-520"
+        },
+        "type" : "org.apache.nifi.dbcp.hive.Hive3DBCPService"
+      }, {
+        "bundle" : {
+          "artifact" : "nifi-hive-services-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.7.0.3.2.0.0-520"
+        },
+        "type" : "org.apache.nifi.dbcp.hive.HiveDBCPService"
+      } ],
+      "groupIdentifier" : "607cb2f6-9a3a-3675-8aab-a28c638ea2e4",
+      "identifier" : "e4d686df-eb07-3264-88a4-2a84616e00d9",
+      "name" : "Hive3ConnectionPool",
+      "properties" : {
+        "Kerberos Keytab" : "/tmp/a.keytab",
+        "hive-max-total-connections" : "8",
+        "hive-max-wait-time" : "500 millis"
+      },
+      "propertyDescriptors" : {
+        "kerberos-credentials-service" : {
+          "displayName" : "Kerberos Credentials Service",
+          "identifiesControllerService" : true,
+          "name" : "kerberos-credentials-service",
+          "sensitive" : false
+        },
+        "Validation-query" : {
+          "displayName" : "Validation query",
+          "identifiesControllerService" : false,
+          "name" : "Validation-query",
+          "sensitive" : false
+        },
+        "Kerberos Keytab" : {
+          "displayName" : "Kerberos Keytab",
+          "identifiesControllerService" : false,
+          "name" : "Kerberos Keytab",
+          "sensitive" : false
+        },
+        "hive-max-total-connections" : {
+          "displayName" : "Max Total Connections",
+          "identifiesControllerService" : false,
+          "name" : "hive-max-total-connections",
+          "sensitive" : false
+        },
+        "hive-db-password" : {
+          "displayName" : "Password",
+          "identifiesControllerService" : false,
+          "name" : "hive-db-password",
+          "sensitive" : false
+        },
+        "hive-db-connect-url" : {
+          "displayName" : "Database Connection URL",
+          "identifiesControllerService" : false,
+          "name" : "hive-db-connect-url",
+          "sensitive" : false
+        },
+        "Kerberos Principal" : {
+          "displayName" : "Kerberos Principal",
+          "identifiesControllerService" : false,
+          "name" : "Kerberos Principal",
+          "sensitive" : false
+        },
+        "hive-config-resources" : {
+          "displayName" : "Hive Configuration Resources",
+          "identifiesControllerService" : false,
+          "name" : "hive-config-resources",
+          "sensitive" : false
+        },
+        "hive-max-wait-time" : {
+          "displayName" : "Max Wait Time",
+          "identifiesControllerService" : false,
+          "name" : "hive-max-wait-time",
+          "sensitive" : false
+        },
+        "hive-db-user" : {
+          "displayName" : "Database User",
+          "identifiesControllerService" : false,
+          "name" : "hive-db-user",
+          "sensitive" : false
+        }
+      },
+      "type" : "org.apache.nifi.dbcp.hive.Hive3ConnectionPool"
+    }, {
+      "bundle" : {
+        "artifact" : "nifi-kerberos-credentials-service-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.7.0.3.2.0.0-520"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "nifi-standard-services-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.7.0.3.2.0.0-520"
+        },
+        "type" : "org.apache.nifi.kerberos.KerberosCredentialsService"
+      } ],
+      "groupIdentifier" : "607cb2f6-9a3a-3675-8aab-a28c638ea2e4",
+      "identifier" : "8b212b8e-d82e-3f85-8503-1dc3e471db97",
+      "name" : "KeytabCredentialsService",
+      "properties" : { },
+      "propertyDescriptors" : {
+        "Kerberos Keytab" : {
+          "displayName" : "Kerberos Keytab",
+          "identifiesControllerService" : false,
+          "name" : "Kerberos Keytab",
+          "sensitive" : false
+        },
+        "Kerberos Principal" : {
+          "displayName" : "Kerberos Principal",
+          "identifiesControllerService" : false,
+          "name" : "Kerberos Principal",
+          "sensitive" : false
+        }
+      },
+      "type" : "org.apache.nifi.kerberos.KeytabCredentialsService"
+    }, {
+      "bundle" : {
+        "artifact" : "nifi-kerberos-credentials-service-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.7.0.3.2.0.0-520"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "nifi-standard-services-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.7.0.3.2.0.0-520"
+        },
+        "type" : "org.apache.nifi.kerberos.KerberosCredentialsService"
+      } ],
+      "groupIdentifier" : "607cb2f6-9a3a-3675-8aab-a28c638ea2e4",
+      "identifier" : "ffe4d665-1699-3592-9852-6e5616f186ec",
+      "name" : "KeytabCredentialsService",
+      "properties" : { },
+      "propertyDescriptors" : {
+        "Kerberos Keytab" : {
+          "displayName" : "Kerberos Keytab",
+          "identifiesControllerService" : false,
+          "name" : "Kerberos Keytab",
+          "sensitive" : false
+        },
+        "Kerberos Principal" : {
+          "displayName" : "Kerberos Principal",
+          "identifiesControllerService" : false,
+          "name" : "Kerberos Principal",
+          "sensitive" : false
+        }
+      },
+      "type" : "org.apache.nifi.kerberos.KeytabCredentialsService"
+    } ],
+    "funnels" : [ {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "607cb2f6-9a3a-3675-8aab-a28c638ea2e4",
+      "identifier" : "0d79b4f1-b67d-3880-8716-e15befde8dee",
+      "position" : {
+        "x" : 899.0,
+        "y" : 68.0
+      }
+    }, {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "607cb2f6-9a3a-3675-8aab-a28c638ea2e4",
+      "identifier" : "1167770d-efe2-3905-bb86-5eef56e7e081",
+      "position" : {
+        "x" : 315.0,
+        "y" : -144.0
+      }
+    } ],
+    "identifier" : "607cb2f6-9a3a-3675-8aab-a28c638ea2e4",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "name" : "First",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 589.0,
+      "y" : 160.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-hadoop-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.7.0.3.2.0.0-520"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "607cb2f6-9a3a-3675-8aab-a28c638ea2e4",
+      "identifier" : "40d24c55-dd3d-3490-99f9-3d6630655a50",
+      "name" : "PutHDFS",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 179.0,
+        "y" : 64.0
+      },
+      "properties" : {
+        "Hadoop Configuration Resources" : "/tmp/conf/core-site.xml",
+        "Compression codec" : "NONE",
+        "Kerberos Keytab" : "/tmp/a.keytab",
+        "Kerberos Principal" : "admin/admin@HWX.COM",
+        "Kerberos Relogin Period" : "4 hours",
+        "Directory" : "/tmp",
+        "Conflict Resolution Strategy" : "fail"
+      },
+      "propertyDescriptors" : {
+        "Permissions umask" : {
+          "displayName" : "Permissions umask",
+          "identifiesControllerService" : false,
+          "name" : "Permissions umask",
+          "sensitive" : false
+        },
+        "Hadoop Configuration Resources" : {
+          "displayName" : "Hadoop Configuration Resources",
+          "identifiesControllerService" : false,
+          "name" : "Hadoop Configuration Resources",
+          "sensitive" : false
+        },
+        "Remote Owner" : {
+          "displayName" : "Remote Owner",
+          "identifiesControllerService" : false,
+          "name" : "Remote Owner",
+          "sensitive" : false
+        },
+        "Additional Classpath Resources" : {
+          "displayName" : "Additional Classpath Resources",
+          "identifiesControllerService" : false,
+          "name" : "Additional Classpath Resources",
+          "sensitive" : false
+        },
+        "Compression codec" : {
+          "displayName" : "Compression codec",
+          "identifiesControllerService" : false,
+          "name" : "Compression codec",
+          "sensitive" : false
+        },
+        "IO Buffer Size" : {
+          "displayName" : "IO Buffer Size",
+          "identifiesControllerService" : false,
+          "name" : "IO Buffer Size",
+          "sensitive" : false
+        },
+        "Remote Group" : {
+          "displayName" : "Remote Group",
+          "identifiesControllerService" : false,
+          "name" : "Remote Group",
+          "sensitive" : false
+        },
+        "Block Size" : {
+          "displayName" : "Block Size",
+          "identifiesControllerService" : false,
+          "name" : "Block Size",
+          "sensitive" : false
+        },
+        "kerberos-credentials-service" : {
+          "displayName" : "Kerberos Credentials Service",
+          "identifiesControllerService" : true,
+          "name" : "kerberos-credentials-service",
+          "sensitive" : false
+        },
+        "Kerberos Keytab" : {
+          "displayName" : "Kerberos Keytab",
+          "identifiesControllerService" : false,
+          "name" : "Kerberos Keytab",
+          "sensitive" : false
+        },
+        "Kerberos Principal" : {
+          "displayName" : "Kerberos Principal",
+          "identifiesControllerService" : false,
+          "name" : "Kerberos Principal",
+          "sensitive" : false
+        },
+        "Replication" : {
+          "displayName" : "Replication",
+          "identifiesControllerService" : false,
+          "name" : "Replication",
+          "sensitive" : false
+        },
+        "Kerberos Relogin Period" : {
+          "displayName" : "Kerberos Relogin Period",
+          "identifiesControllerService" : false,
+          "name" : "Kerberos Relogin Period",
+          "sensitive" : false
+        },
+        "Directory" : {
+          "displayName" : "Directory",
+          "identifiesControllerService" : false,
+          "name" : "Directory",
+          "sensitive" : false
+        },
+        "Conflict Resolution Strategy" : {
+          "displayName" : "Conflict Resolution Strategy",
+          "identifiesControllerService" : false,
+          "name" : "Conflict Resolution Strategy",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.hadoop.PutHDFS",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success", "failure", "retry" ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-hive-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.7.0.3.2.0.0-520"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "607cb2f6-9a3a-3675-8aab-a28c638ea2e4",
+      "identifier" : "54bd8440-d8c7-34fb-bce8-c93378d8ee51",
+      "name" : "PutHiveQL",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 7.849834075091735,
+        "y" : -323.2981678153261
+      },
+      "properties" : {
+        "statement-delimiter" : ";",
+        "Hive Database Connection Pooling Service" : "e4d686df-eb07-3264-88a4-2a84616e00d9",
+        "hive-charset" : "UTF-8",
+        "rollback-on-failure" : "false",
+        "hive-batch-size" : "100"
+      },
+      "propertyDescriptors" : {
+        "statement-delimiter" : {
+          "displayName" : "Statement Delimiter",
+          "identifiesControllerService" : false,
+          "name" : "statement-delimiter",
+          "sensitive" : false
+        },
+        "Hive Database Connection Pooling Service" : {
+          "displayName" : "Hive Database Connection Pooling Service",
+          "identifiesControllerService" : true,
+          "name" : "Hive Database Connection Pooling Service",
+          "sensitive" : false
+        },
+        "hive-charset" : {
+          "displayName" : "Character Set",
+          "identifiesControllerService" : false,
+          "name" : "hive-charset",
+          "sensitive" : false
+        },
+        "rollback-on-failure" : {
+          "displayName" : "Rollback On Failure",
+          "identifiesControllerService" : false,
+          "name" : "rollback-on-failure",
+          "sensitive" : false
+        },
+        "hive-batch-size" : {
+          "displayName" : "Batch Size",
+          "identifiesControllerService" : false,
+          "name" : "hive-batch-size",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.hive.PutHiveQL",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-hadoop-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.7.0.3.2.0.0-520"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "607cb2f6-9a3a-3675-8aab-a28c638ea2e4",
+      "identifier" : "0c9b9dfb-0bc6-3328-abaf-d344e3f78455",
+      "name" : "PutHDFS",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 486.1854344135446,
+        "y" : -138.104057749254
+      },
+      "properties" : {
+        "Compression codec" : "NONE",
+        "Kerberos Relogin Period" : "4 hours",
+        "Conflict Resolution Strategy" : "fail"
+      },
+      "propertyDescriptors" : {
+        "Permissions umask" : {
+          "displayName" : "Permissions umask",
+          "identifiesControllerService" : false,
+          "name" : "Permissions umask",
+          "sensitive" : false
+        },
+        "Hadoop Configuration Resources" : {
+          "displayName" : "Hadoop Configuration Resources",
+          "identifiesControllerService" : false,
+          "name" : "Hadoop Configuration Resources",
+          "sensitive" : false
+        },
+        "Remote Owner" : {
+          "displayName" : "Remote Owner",
+          "identifiesControllerService" : false,
+          "name" : "Remote Owner",
+          "sensitive" : false
+        },
+        "Additional Classpath Resources" : {
+          "displayName" : "Additional Classpath Resources",
+          "identifiesControllerService" : false,
+          "name" : "Additional Classpath Resources",
+          "sensitive" : false
+        },
+        "Compression codec" : {
+          "displayName" : "Compression codec",
+          "identifiesControllerService" : false,
+          "name" : "Compression codec",
+          "sensitive" : false
+        },
+        "IO Buffer Size" : {
+          "displayName" : "IO Buffer Size",
+          "identifiesControllerService" : false,
+          "name" : "IO Buffer Size",
+          "sensitive" : false
+        },
+        "Remote Group" : {
+          "displayName" : "Remote Group",
+          "identifiesControllerService" : false,
+          "name" : "Remote Group",
+          "sensitive" : false
+        },
+        "Block Size" : {
+          "displayName" : "Block Size",
+          "identifiesControllerService" : false,
+          "name" : "Block Size",
+          "sensitive" : false
+        },
+        "kerberos-credentials-service" : {
+          "displayName" : "Kerberos Credentials Service",
+          "identifiesControllerService" : true,
+          "name" : "kerberos-credentials-service",
+          "sensitive" : false
+        },
+        "Kerberos Keytab" : {
+          "displayName" : "Kerberos Keytab",
+          "identifiesControllerService" : false,
+          "name" : "Kerberos Keytab",
+          "sensitive" : false
+        },
+        "Kerberos Principal" : {
+          "displayName" : "Kerberos Principal",
+          "identifiesControllerService" : false,
+          "name" : "Kerberos Principal",
+          "sensitive" : false
+        },
+        "Replication" : {
+          "displayName" : "Replication",
+          "identifiesControllerService" : false,
+          "name" : "Replication",
+          "sensitive" : false
+        },
+        "Kerberos Relogin Period" : {
+          "displayName" : "Kerberos Relogin Period",
+          "identifiesControllerService" : false,
+          "name" : "Kerberos Relogin Period",
+          "sensitive" : false
+        },
+        "Directory" : {
+          "displayName" : "Directory",
+          "identifiesControllerService" : false,
+          "name" : "Directory",
+          "sensitive" : false
+        },
+        "Conflict Resolution Strategy" : {
+          "displayName" : "Conflict Resolution Strategy",
+          "identifiesControllerService" : false,
+          "name" : "Conflict Resolution Strategy",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.hadoop.PutHDFS",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "variables" : { }
+  }
+}
