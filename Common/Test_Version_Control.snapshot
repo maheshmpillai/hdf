@@ -76,7 +76,7 @@
       "properties" : {
         "character-set" : "UTF-8",
         "File Size" : "100B",
-        "generate-ff-custom-text" : "${CustomText}",
+        "generate-ff-custom-text" : "${CustomText2}",
         "Batch Size" : "1",
         "Unique FlowFiles" : "false",
         "Data Format" : "Text"
@@ -328,7 +328,8 @@
     } ],
     "remoteProcessGroups" : [ ],
     "variables" : {
-      "CustomText" : "HAHAHA"
+      "CustomText2" : "HOHOHO",
+      "CustomText" : "HIHIHI"
     }
   }
 }
