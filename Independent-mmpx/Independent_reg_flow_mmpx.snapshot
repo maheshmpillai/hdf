@@ -8,14 +8,14 @@
     "connections" : [ ],
     "controllerServices" : [ ],
     "funnels" : [ ],
-    "identifier" : "a77615cb-3e84-3bae-982f-31a918213c22",
+    "identifier" : "4c0c7546-4927-33a1-b04f-24c25deac9bb",
     "inputPorts" : [ ],
     "labels" : [ ],
-    "name" : "Independent Registry mmpx",
+    "name" : "Independent Registry",
     "outputPorts" : [ ],
     "position" : {
-      "x" : 383.0,
-      "y" : 397.0
+      "x" : 1099.5294425076643,
+      "y" : 732.0913458250216
     },
     "processGroups" : [ ],
     "processors" : [ ],
