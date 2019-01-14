@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "dataModelVersion" : "2"
+  },
+  "content" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ ],
+    "controllerServices" : [ ],
+    "funnels" : [ ],
+    "identifier" : "a77615cb-3e84-3bae-982f-31a918213c22",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "name" : "Independent Registry mmpx",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 383.0,
+      "y" : 397.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ ],
+    "remoteProcessGroups" : [ ],
+    "variables" : { }
+  }
+}
