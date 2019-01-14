@@ -18,7 +18,97 @@
       "y" : 128.0
     },
     "processGroups" : [ ],
-    "processors" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.7.0.3.2.0.0-520"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "e96adf7a-bf4a-3ba8-a2e2-2aebead0b9f9",
+      "identifier" : "ce02d100-40a0-39fe-bd13-a68d17cbe930",
+      "name" : "TailFile",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 324.0,
+        "y" : 71.0
+      },
+      "properties" : {
+        "tailfile-recursive-lookup" : "false",
+        "File Location" : "Local",
+        "tailfile-maximum-age" : "24 hours",
+        "Initial Start Position" : "Beginning of File",
+        "tailfile-lookup-frequency" : "10 minutes",
+        "tail-mode" : "Single file"
+      },
+      "propertyDescriptors" : {
+        "tail-base-directory" : {
+          "displayName" : "Base directory",
+          "identifiesControllerService" : false,
+          "name" : "tail-base-directory",
+          "sensitive" : false
+        },
+        "tailfile-recursive-lookup" : {
+          "displayName" : "Recursive lookup",
+          "identifiesControllerService" : false,
+          "name" : "tailfile-recursive-lookup",
+          "sensitive" : false
+        },
+        "File Location" : {
+          "displayName" : "State Location",
+          "identifiesControllerService" : false,
+          "name" : "File Location",
+          "sensitive" : false
+        },
+        "tailfile-maximum-age" : {
+          "displayName" : "Maximum age",
+          "identifiesControllerService" : false,
+          "name" : "tailfile-maximum-age",
+          "sensitive" : false
+        },
+        "Rolling Filename Pattern" : {
+          "displayName" : "Rolling Filename Pattern",
+          "identifiesControllerService" : false,
+          "name" : "Rolling Filename Pattern",
+          "sensitive" : false
+        },
+        "File to Tail" : {
+          "displayName" : "File(s) to Tail",
+          "identifiesControllerService" : false,
+          "name" : "File to Tail",
+          "sensitive" : false
+        },
+        "Initial Start Position" : {
+          "displayName" : "Initial Start Position",
+          "identifiesControllerService" : false,
+          "name" : "Initial Start Position",
+          "sensitive" : false
+        },
+        "tailfile-lookup-frequency" : {
+          "displayName" : "Lookup frequency",
+          "identifiesControllerService" : false,
+          "name" : "tailfile-lookup-frequency",
+          "sensitive" : false
+        },
+        "tail-mode" : {
+          "displayName" : "Tailing mode",
+          "identifiesControllerService" : false,
+          "name" : "tail-mode",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.TailFile",
+      "yieldDuration" : "1 sec"
+    } ],
     "remoteProcessGroups" : [ ],
     "variables" : { }
   }
